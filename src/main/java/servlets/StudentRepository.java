@@ -17,7 +17,7 @@ public class StudentRepository {
             Class.forName("org.postgresql.Driver");
             // 1. Установка соединения с базой данных
             connection = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/students", // URL базы данных
+                    "jdbc:postgresql://localhost:5452/students", // URL базы данных
                     "postgres", // Имя пользователя
                     "postgres"  // Пароль
             );
