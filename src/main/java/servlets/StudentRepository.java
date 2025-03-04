@@ -56,7 +56,8 @@ public class StudentRepository {
 //
 //        return students;
 //    }
-    public  String main() {
+    public  String main() throws ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
         // Получаем переменные окружения
         String host = "postgres.railway.internal";
         String port = "5432";

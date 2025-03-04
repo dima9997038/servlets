@@ -14,7 +14,11 @@ public class MainServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        List<Student> allStudents = new StudentRepository().findAllStudents();
 //        allStudents.forEach(System.out::println);
-        System.out.println(new StudentRepository().main());
+        try {
+            System.out.println(new StudentRepository().main());
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         req.getRequestDispatcher(index).forward(req,resp);
     }
 }
