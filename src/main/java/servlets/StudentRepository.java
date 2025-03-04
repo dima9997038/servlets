@@ -70,7 +70,7 @@ public class StudentRepository {
                 "jdbc:postgresql://%s:%s/%s?ssl=true&sslmode=require",
                 host, port, database
         );
-
+        System.out.println(url);
         // Подключаемся к базе данных
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
             System.out.println("Connected to PostgreSQL!");
