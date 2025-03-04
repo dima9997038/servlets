@@ -59,12 +59,16 @@ public class StudentRepository {
     public  String main() throws ClassNotFoundException {
         Class.forName("org.postgresql.Driver");
         // Получаем переменные окружения
-        String host = "postgres.railway.internal";
-        String port = "5432";
-        String database = "railway";
-        String user = "postgres";
-        String password = System.getenv("DMKOtCFRxDXieBspZrQMaqMAxHHdxFBP");
-
+//        String host = "postgres.railway.internal";
+//        String port = "5432";
+//        String database = "railway";
+//        String user = "postgres";
+//        String password = System.getenv("DMKOtCFRxDXieBspZrQMaqMAxHHdxFBP");
+        String host = System.getenv("PGHOST");
+        String port = System.getenv("PGPORT");
+        String database = System.getenv("PGDATABASE");
+        String user = System.getenv("PGUSER");
+        String password = System.getenv("PGPASSWORD");
         // Формируем URL для подключения
         String url = String.format(
                 "jdbc:postgresql://%s:%s/%s?ssl=true&sslmode=require",
