@@ -1,3 +1,4 @@
 servlets\StudentRepository.class
 servlets\Student.class
 servlets\MainServlet.class
+servlets\DatabaseUtil.class

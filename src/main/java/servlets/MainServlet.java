@@ -15,7 +15,7 @@ public class MainServlet extends HttpServlet {
 //        List<Student> allStudents = new StudentRepository().findAllStudents();
 //        allStudents.forEach(System.out::println);
         try {
-            System.out.println(new StudentRepository().main());
+            System.out.println(new StudentRepository().test());
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
