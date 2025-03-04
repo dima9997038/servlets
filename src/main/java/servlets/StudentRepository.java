@@ -88,6 +88,7 @@ public class StudentRepository {
     }
 
     public String test() throws ClassNotFoundException {
+
         try (Connection conn = DatabaseUtil.getConnection()) {
            return "Connected to PostgreSQL!";
         } catch (SQLException e) {

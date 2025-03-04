@@ -28,6 +28,8 @@ public class DatabaseUtil {
         config.setPassword(password);
         config.setDriverClassName("org.postgresql.Driver");
         dataSource = new HikariDataSource(config);
+    System.out.println("dataSource " + dataSource);
+    System.out.println("url  " + url);
     }
 
     public static Connection getConnection() throws SQLException {
