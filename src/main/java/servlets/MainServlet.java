@@ -12,9 +12,9 @@ public class MainServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Student> allStudents = new StudentRepository().findAllStudents();
-        allStudents.forEach(System.out::println);
-
+//        List<Student> allStudents = new StudentRepository().findAllStudents();
+//        allStudents.forEach(System.out::println);
+        System.out.println(new StudentRepository().main());
         req.getRequestDispatcher(index).forward(req,resp);
     }
 }
